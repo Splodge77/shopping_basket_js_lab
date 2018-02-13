@@ -22,6 +22,12 @@ describe('ShoppingBasket', function(){
     const actual = shopping_basket.lengthOfItemArray();
     assert.strictEqual(actual, 1);
   });
+  it('should be able to remove item', function() {
+    shopping_basket.addItem(item);
+    shopping_basket.removeItem(item);
+    const actual = shopping_basket.lengthOfItemArray();
+    assert.strictEqual(actual, 0);
+  })
   it('item has name', function(){
     const actual = item.name;
     assert.strictEqual(actual, 'Banana')
